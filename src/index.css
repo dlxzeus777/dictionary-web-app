@@ -1,0 +1,187 @@
+
+:root
+{
+  --main-color: rgb(151, 58, 244);
+  --grey-color: #ccc;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-size: 20px;
+}
+.container
+{
+  max-width: 40rem;
+  margin: 0 auto;
+  width: 90%;
+}
+.header-container
+{
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+.logo
+{
+  margin-right: auto;
+  font-size: 3rem;
+}
+.font-and-theme
+{
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.theme-and-icon
+{
+  border-left: 1px solid grey;
+  padding-left: 2rem;
+  display: flex;
+}
+input{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1rem 0;
+  padding-left: 1rem;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border: none;
+  background: var(--grey-color);
+  color: black;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+.input-container
+{
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+}
+.search-btn
+{
+  background: var(--grey-color);
+  border: none;
+  padding: .95rem;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  font-size: inherit;
+}
+.spell
+{
+  margin-right: auto;
+}
+.heading
+{
+  display: flex;
+  align-items: center;
+}
+.audio-icon
+{
+  font-size: 3rem;
+  color: var(--main-color);
+  cursor: pointer;
+}
+.noun
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.line
+{
+  width: 100%;
+  height: 1px;
+  background: var(--grey-color);
+}
+ul
+{
+  list-style: none;
+}
+
+ul li::before
+{
+  content: "\2022";
+  color: var(--main-color);
+  font-weight: bold;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+ul li{
+  margin-bottom: 0.75rem;
+}
+.purple
+{
+  color: var(--main-color);
+}
+.synonym
+{
+  margin-left: 1rem;
+}
+.source
+{
+  margin-bottom: 1rem;
+}
+.source-icon
+{
+  font-size: .75rem;
+}
+.source-link
+{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--grey-color);
+}
+.loading
+{
+  margin-top: 2rem;
+  text-align: center;
+}
+.asd
+{
+  margin-right: 15px;
+}
+.audio-element
+{
+  width: 100%;
+}
+.dark-icon
+{
+  font-size: 2rem;
+}
+#fonts
+{
+  border: none;
+  outline: none;
+  border-radius: 15px;
+}
+.hr{
+  margin: 5rem 0;
+}
+@media (max-width: 440px)
+{
+  .source > a{
+    font-size: .99rem;
+  }
+}
+@media (max-width: 310px)
+{
+  .theme-and-icon
+  {
+    padding: .5rem;
+  }
+  .font-and-theme
+  {
+    gap: .5rem;
+  }
+  .audio-icon
+  {
+    font-size: 2.5rem;
+  }
+}
