@@ -1,8 +1,7 @@
-function Error({word})
-{
-    return(
+function Error({ word }) {
+    return (
         <>
-        <h1>{word.title}</h1>
+            <h1>{word.title}</h1>
         </>
     )
 }

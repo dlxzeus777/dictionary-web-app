@@ -16,14 +16,6 @@ function App() {
   const [theme, setTheme] = useState(false)
   const [navigate, setNavigate] = useState(true);
 
-  console.log(fontFamily)
-  console.log(word)
-  console.log(isLoading)
-  console.log(isOk)
-  console.log(input)
-  console.log(theme)
-  console.log(navigate)
-
   // FUNCTIONS
 
   const OnSubmit = (e) => {
@@ -96,7 +88,7 @@ function App() {
           <Input inputChange={inputChange} OnSubmit={OnSubmit} />
           {isLoading
         ? <h1 className='loading'>Loading...</h1>
-        : isOk ? <Main word={word} playAudio={playAudio} /> : <Error word={word} />}
+        : isOk ? <Main word={word} playAudio={playAudio} /> : <Error word={word} input={input}/>}
         </>
       }
 
