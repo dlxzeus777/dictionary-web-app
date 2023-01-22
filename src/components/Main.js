@@ -12,7 +12,7 @@ function Main({ word, playAudio }) {
                     )
                 })
                 const definitions = item.meanings.map(definition => {
-                    
+
                     return (
                         <>
                             <div className='noun'>
@@ -50,17 +50,18 @@ function Main({ word, playAudio }) {
                                 <h1>{item.word}</h1>
                                 <div className='purple'>{item.phonetic}</div>
                             </div>
-                            {item.phonetics.map(text =>
-                            {
-                                return text.audio ? <AiFillPlayCircle className='audio-icon' onClick={() => playAudio(text.audio)} /> : ''
-                            })}
+                            <div className='audio'>
+                                {item.phonetics.map(text => {
+                                    return text.audio ? <AiFillPlayCircle className='audio-icon' onClick={() => playAudio(text.audio)} /> : ''
+                                })}
+                            </div>
                         </div>
                         {definitions}
                         <div className='source'>
-                            <h4>Source</h4>
+                            <h4 className='source-heading'>Source</h4>
                             {url}
                         </div>
-                        <hr className='hr'/>
+                        <hr className='hr' />
                     </>
                 )
             })}
