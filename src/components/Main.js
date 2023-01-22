@@ -8,11 +8,11 @@ function Main({ word, playAudio }) {
             {word.map((item) => {
                 const url = item.sourceUrls.map(url => {
                     return (
-                        <a href={url} className='source-link' target='_blank'>{url} <GrShare className='source-icon' /></a>
+                        <a href={url} className='source-link' target='_blank' rel='noreferrer'><p>{url}</p> <GrShare className='source-icon' /></a>
                     )
                 })
                 const definitions = item.meanings.map(definition => {
-                    { console.log(definition) }
+                    
                     return (
                         <>
                             <div className='noun'>

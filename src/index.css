@@ -29,6 +29,7 @@ body {
 {
   margin-right: auto;
   font-size: 3rem;
+  cursor: pointer;
 }
 .font-and-theme
 {
@@ -49,6 +50,8 @@ input{
   padding-left: 1rem;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
+  -webkit-border-top-left-radius: 15px;
+  -webkit-border-bottom-left-radius: 15px;
   border: none;
   background: var(--grey-color);
   color: black;
@@ -69,6 +72,8 @@ input{
   padding: .95rem;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+  -webkit-border-top-right-radius: 15px;
+  -webkit-border-bottom-right-radius: 15px;
   font-size: inherit;
 }
 .spell
@@ -154,20 +159,35 @@ ul li{
 .dark-icon
 {
   font-size: 2rem;
+  cursor: pointer;
 }
 #fonts
 {
   border: none;
   outline: none;
   border-radius: 15px;
+  cursor: pointer;
 }
-.hr{
-  margin: 5rem 0;
+.start-btn
+{
+  padding: .7rem;
+  background: var(--main-color);
+  border-radius: 15px;
+  border: none;
+  color: white;
+}
+.welcome-container
+{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
 }
 @media (max-width: 440px)
 {
   .source > a{
-    font-size: .99rem;
+    font-size: .75rem;
   }
 }
 @media (max-width: 310px)

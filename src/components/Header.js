@@ -2,11 +2,11 @@ import { BiBook } from 'react-icons/bi'
 import { CiDark } from 'react-icons/ci'
 import { BsFillSunFill } from 'react-icons/bs'
 
-function Header({ onChange, theme, darkMode }) {
+function Header({ onChange, theme, darkMode, handleClick }) {
 
     return (
         <div className='header-container'>
-            <BiBook className='logo'/>
+            <BiBook className='logo' onClick={handleClick}/>
             <div className='font-and-theme'>
                 <select id="fonts" onChange={onChange}>
                     <option value="sans-serif">Sans Serif</option>
