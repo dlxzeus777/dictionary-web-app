@@ -1,7 +1,9 @@
 import { AiFillPlayCircle } from 'react-icons/ai'
 import { GrShare } from 'react-icons/gr'
+import { AiOutlineStar } from 'react-icons/ai'
+import { AiFillStar } from 'react-icons/ai'
 
-function Main({ word, playAudio }) {
+function Main({ word, playAudio, addToFavorites, isFavorite, key }) {
 
     return (
         <>
@@ -44,10 +46,12 @@ function Main({ word, playAudio }) {
                 })
                 return (
                     <>
-                        <h1>{item.title}</h1>
+
                         <div className="heading">
                             <div className='spell'>
-                                <h1>{item.word}</h1>
+                                <div className='favorites'>
+                                    <h1>{item.word}</h1>
+                                </div>
                                 <div className='purple'>{item.phonetic}</div>
                             </div>
                             <div className='audio'>

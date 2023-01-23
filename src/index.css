@@ -177,6 +177,7 @@ ul li{
   border: none;
   color: white;
   cursor: pointer;
+  margin-bottom: 5rem;
 }
 .welcome-container
 {
@@ -196,6 +197,16 @@ ul li{
 {
   margin-top: 4rem;
   margin-bottom: 0;
+}
+.favorites
+{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.dictionary
+{
+  max-width: 100%;
 }
 @media (max-width: 440px)
 {

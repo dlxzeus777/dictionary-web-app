@@ -3,18 +3,26 @@ import Input from './components/Input';
 import Main from './components/Main';
 import Error from './components/Error';
 import { useState, useEffect } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import Welcome from './components/Welcome';
 
 function App() {
 
   // STATES
-  const [fontFamily, setFontFamily] = useState('sans-serif');
-  const [word, setWord] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [fontFamily, setFontFamily] = useState('sans-serif')
+  const [word, setWord] = useState([])
+  const [isLoading, setIsLoading] = useState(false)
   const [isOk, setIsOk] = useState(true)
   const [input, setInput] = useState('')
   const [theme, setTheme] = useState(false)
-  const [navigate, setNavigate] = useState(true);
+  const [navigate, setNavigate] = useState(true)
+  const [isFavorite, setIsFavorite] = useState(false)
+  const [favorites, setFavorites] = useState(
+    {
+      favorites: [],
+    }
+  )
+
 
   // FUNCTIONS
 
