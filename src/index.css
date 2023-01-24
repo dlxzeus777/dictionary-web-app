@@ -265,6 +265,20 @@ ul li{
   cursor: pointer;
   color: var(--main-color)
 }
+.favorite-container > p
+{
+  margin: 0;
+}
+.favorite-synonym
+{
+  color: white;
+}
+.word-bin
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 @media (max-width: 440px)
 {
   .source > a{

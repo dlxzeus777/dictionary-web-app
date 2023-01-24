@@ -24,6 +24,7 @@ function App() {
 
   // FUNCTIONS
 
+  // fetching data and returning the word. BR00tal aswell LMAO kill me
   const OnSubmit = (e) => {
     e.preventDefault()
     const dataFetch = async () => {
@@ -43,24 +44,29 @@ function App() {
     dataFetch();
   }
 
+  // Dark mode toggler function
   const darkMode = () => {
     setTheme(prevTheme => !prevTheme)
   }
 
+  // Audio function
   const playAudio = (audio) => {
     new Audio(`${audio}`).play();
     console.log(audio)
   }
 
+  //Setting the font family to the value the user chooses
   const onChange = (e) => {
     setFontFamily(e.target.value)
   }
 
+  // input change could be done better with useRef
   const inputChange = (e) => {
     setInput(e.target.value)
     console.log(input)
   }
 
+  // Navigating to front page
   const handleClick = () => {
     setNavigate(prevNavigation => !prevNavigation);
   }
@@ -83,6 +89,7 @@ function App() {
     };
   }, [theme]);
 
+  // Status text function
   const statusBackToDefault = () =>
   {
     setTimeout(() =>
@@ -92,7 +99,8 @@ function App() {
   }
 
 
-  const addToFavorites = (word) => {
+  // Adding words to favorites. And we're checking if its already in the array if its not the word gets added else it wont get added. BR00TAL XDD
+  const addToFavorites = (word, meanings) => {
     const favoriteWords = favorites.map(favorite => {
       return favorite.favorite
     })
@@ -106,18 +114,18 @@ function App() {
     {
       setStatus(`${word} added to favorites`)
       statusBackToDefault()
-      setFavorites(current => [...current, { id: uuidv4(), favorite: word }])
+      setFavorites(current => [...current, { id: uuidv4(), favorite: word, meanings: meanings}])
     }
   }
 
-  
-
+  // Deleting favorites from array with filter
   const deleteFavorites = (id) => {
     setFavorites(current => current.filter(item => {
       return item.id !== id
     }))
   }
 
+  // Navigating to favorites function. Didn't wanna add react routes
   const goToFavorites = () => {
     setNavigateToFavorites(current => !current)
   }

@@ -1,19 +1,33 @@
 import { AiFillPlayCircle } from 'react-icons/ai'
 import { GrShare } from 'react-icons/gr'
 import { AiFillPlusSquare } from 'react-icons/ai'
-import { useEffect } from 'react'
 
 function Main({ word, playAudio, addToFavorites, status }) {
 
     return (
         <>
-        <h3 className='status'>{status}</h3>
+            <h3 className='status'>{status}</h3>
             {word.map((item) => {
+
+                const favoriteDefinitions = item.meanings.map(definition => {
+                    return (
+                        <>
+                            {definition.definitions.map((item, index) => {
+                                return (
+                                    <>
+                                        <li>{item.definition}</li>
+                                    </>
+                                )
+                            })}
+                        </>
+                    )
+                })
                 const url = item.sourceUrls.map(url => {
                     return (
                         <a href={url} className='source-link' target='_blank' rel='noreferrer'><p>{url}</p> <GrShare className='source-icon' /></a>
                     )
                 })
+
                 const definitions = item.meanings.map(definition => {
 
                     return (
@@ -52,7 +66,7 @@ function Main({ word, playAudio, addToFavorites, status }) {
                             <div className='spell'>
                                 <div className='favorites'>
                                     <h1>{item.word}</h1>
-                                    <AiFillPlusSquare onClick={() => addToFavorites(item.word)} className='add-to-favs'/>
+                                    <AiFillPlusSquare onClick={() => addToFavorites(item.word, favoriteDefinitions)} className='add-to-favs' />
                                 </div>
                                 <div className='purple'>{item.phonetic}</div>
                             </div>
