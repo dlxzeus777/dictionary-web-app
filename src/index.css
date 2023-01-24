@@ -23,13 +23,16 @@ body {
 {
   display: flex;
   align-items: center;
-  margin-top: 1rem;
+  padding-top: 1rem;
 }
 .logo
 {
   margin-right: auto;
-  font-size: 3rem;
+  font-size: 2.5rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 .font-and-theme
 {
@@ -204,14 +207,79 @@ ul li{
   align-items: center;
   gap: 1rem;
 }
+.favorite-words
+{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--main-color);
+  width: fit-content;
+  padding: .5rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+.favorite-words > p{
+  margin: 0;
+}
+.bin
+{
+  cursor: pointer;
+}
+.favorite-words-header
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.go-back-btn
+{
+  padding: .1rem;
+  background: black;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 2rem;
+}
+.favorite-navigation
+{
+  cursor: pointer;
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0;
+}
 .dictionary
 {
   max-width: 100%;
+}
+.status
+{
+  text-align: center;
+}
+.add-to-favs
+{
+  font-size: 2rem;
+}
+.add-to-favs:hover
+{
+  cursor: pointer;
+  color: var(--main-color)
 }
 @media (max-width: 440px)
 {
   .source > a{
     font-size: .75rem;
+  }
+}
+@media (max-width: 415px)
+{
+  .book
+  {
+    display: none;
+  }
+  .favorite-navigation
+  {
+    font-size: 1rem;
   }
 }
 @media (max-width: 310px)

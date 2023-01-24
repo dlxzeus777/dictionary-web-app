@@ -8,7 +8,7 @@ const Welcome = ({handleClick}) => {
       <h1>Welcome to the Dictionary App</h1>
       <p>This app allows you to search for words and their meanings.</p>
       <button className="start-btn" onClick={handleClick}>Start Searching</button>
-      <img src={dictionary} className='dictionary'/>
+      <img src={dictionary} className='dictionary' alt='dictionary'/>
     </div>
   );
 }
