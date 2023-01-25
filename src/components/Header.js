@@ -1,14 +1,15 @@
 import { BiBook } from 'react-icons/bi'
 import { CiDark } from 'react-icons/ci'
 import { BsFillSunFill } from 'react-icons/bs'
+import { AiFillHeart } from 'react-icons/ai'
 
-function Header({ onChange, theme, darkMode, handleClick, goToFavorites }) {
+function Header({ onChange, theme, darkMode, handleClick, goToFavorites, navigateToFavorites }) {
 
     return (
+        <>
         <div className='header-container'>
             <div className='logo'>
                 <BiBook  onClick={handleClick} className='book'/>
-                <p onClick={goToFavorites} className='favorite-navigation'>Favorites</p>
                 </div>
 
             <div className='font-and-theme'>
@@ -22,6 +23,11 @@ function Header({ onChange, theme, darkMode, handleClick, goToFavorites }) {
                 </div>
             </div>
         </div>
+        <div className='bottom-header' onClick={goToFavorites}>
+            <p>Favorites</p>
+            <AiFillHeart />
+        </div>
+        </>
     )
 }
 

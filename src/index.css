@@ -133,7 +133,9 @@ ul li{
 }
 .source
 {
-  margin-bottom: 1rem;
+  margin-bottom: 10rem;
+  border-bottom: 1px solid var(--grey-color);
+  padding-bottom: 1rem;
 }
 .source-icon
 {
@@ -163,6 +165,29 @@ ul li{
 {
   font-size: 2rem;
   cursor: pointer;
+}
+.word{
+  margin: 0;
+}
+.bottom-header
+{
+  overflow: hidden;
+  background: var(--grey-color);
+  position: fixed;
+  bottom: 10px;
+  max-width: 40rem;
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  gap: 1rem;
+  cursor: pointer;
+}
+.bottom-header:hover
+{
+  background: #aaa;
 }
 #fonts
 {
@@ -213,10 +238,10 @@ ul li{
   align-items: center;
   gap: 1rem;
   background: var(--main-color);
-  width: fit-content;
   padding: .5rem;
   border-radius: 12px;
   margin-bottom: 1rem;
+  justify-content: space-between;
 }
 .favorite-words > p{
   margin: 0;
@@ -240,14 +265,6 @@ ul li{
   cursor: pointer;
   font-size: 2rem;
 }
-.favorite-navigation
-{
-  cursor: pointer;
-  color: var(--main-color);
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin: 0;
-}
 .dictionary
 {
   max-width: 100%;
@@ -265,6 +282,10 @@ ul li{
   cursor: pointer;
   color: var(--main-color)
 }
+.favorite-container
+{
+  width: 100%;
+}
 .favorite-container > p
 {
   margin: 0;
@@ -272,6 +293,11 @@ ul li{
 .favorite-synonym
 {
   color: white;
+}
+.meaning
+{
+  border-bottom: 1px solid var(--grey-color);
+  padding-bottom: 1rem;
 }
 .word-bin
 {
@@ -285,17 +311,7 @@ ul li{
     font-size: .75rem;
   }
 }
-@media (max-width: 415px)
-{
-  .book
-  {
-    display: none;
-  }
-  .favorite-navigation
-  {
-    font-size: 1rem;
-  }
-}
+
 @media (max-width: 310px)
 {
   .theme-and-icon

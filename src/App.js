@@ -24,7 +24,7 @@ function App() {
 
   // FUNCTIONS
 
-  // fetching data and returning the word. BR00tal aswell LMAO kill me
+  // fetching data and returning the word.
   const OnSubmit = (e) => {
     e.preventDefault()
     const dataFetch = async () => {
@@ -99,7 +99,7 @@ function App() {
   }
 
 
-  // Adding words to favorites. And we're checking if its already in the array if its not the word gets added else it wont get added. BR00TAL XDD
+  // Adding words to favorites. And we're checking if its already in the array if its not the word gets added else it wont get added.
   const addToFavorites = (word, meanings) => {
     const favoriteWords = favorites.map(favorite => {
       return favorite.favorite
@@ -137,7 +137,7 @@ function App() {
           ? <FavoriteWords favorites={favorites} deleteFavorites={deleteFavorites} goToFavorites={goToFavorites} />
           : navigate
             ? <Welcome handleClick={handleClick} />
-            : <><Header onChange={onChange} darkMode={darkMode} theme={theme} handleClick={handleClick} goToFavorites={goToFavorites} />
+            : <><Header onChange={onChange} darkMode={darkMode} theme={theme} handleClick={handleClick} goToFavorites={goToFavorites} navigateToFavorites={navigateToFavorites}/>
               <Input inputChange={inputChange} OnSubmit={OnSubmit} />
               {isLoading
                 ? <h1 className='loading'>Loading...</h1>

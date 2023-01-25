@@ -65,7 +65,7 @@ function Main({ word, playAudio, addToFavorites, status }) {
                         <div className="heading">
                             <div className='spell'>
                                 <div className='favorites'>
-                                    <h1>{item.word}</h1>
+                                    <h1 className='word'>{item.word}</h1>
                                     <AiFillPlusSquare onClick={() => addToFavorites(item.word, favoriteDefinitions)} className='add-to-favs' />
                                 </div>
                                 <div className='purple'>{item.phonetic}</div>
@@ -81,7 +81,6 @@ function Main({ word, playAudio, addToFavorites, status }) {
                             <h4 className='source-heading'>Source</h4>
                             {url}
                         </div>
-                        <hr className='hr' />
                     </>
                 )
             })}
