@@ -16,7 +16,7 @@ function FavoriteWords({ favorites, deleteFavorites, goToFavorites }) {
                                 <BsFillTrashFill onClick={() => deleteFavorites(favorite.id)} className='bin' />
                             </div>
                             <h4 className='meaning'>Meaning</h4>
-                            <p className='favorite-word'>{favorite.meanings[0]}</p>
+                            <p>{favorite.meanings[0]}</p>
                         </div>
                     </div>
                 )

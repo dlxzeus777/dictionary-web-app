@@ -180,6 +180,7 @@ ul li{
   border-radius: 15px;
   gap: .5rem;
   cursor: pointer;
+  color: black;
 }
 .bottom-header:hover
 {
@@ -230,14 +231,11 @@ ul li{
 }
 .favorite-words
 {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  background: var(--main-color);
-  padding: .5rem;
-  border-radius: 12px;
-  margin-bottom: 1rem;
+  border-radius: 10px;
   justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 1.25rem;
+  border: 1px solid var(--main-color);
 }
 .favorite-words > p{
   margin: 0;
@@ -245,12 +243,16 @@ ul li{
 .bin
 {
   cursor: pointer;
+  font-size: 2rem;
 }
 .favorite-words-header
 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.favorite-word{
+  font-size: 2rem;
 }
 .go-back-btn
 {
@@ -300,6 +302,9 @@ ul li{
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.items{
+  margin-bottom: 1rem;
 }
 @media (max-width: 440px)
 {

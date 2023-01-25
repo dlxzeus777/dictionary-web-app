@@ -15,7 +15,7 @@ function Main({ word, playAudio, addToFavorites, status }) {
                             {definition.definitions.map((item, index) => {
                                 return (
                                     <>
-                                        <li>{item.definition}</li>
+                                        <li className='items'>{item.definition}</li>
                                     </>
                                 )
                             })}
