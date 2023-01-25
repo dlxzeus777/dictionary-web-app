@@ -53,10 +53,6 @@ input{
   padding-left: 1rem;
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
-  -webkit-border-top-left-radius: 15px;
-  -webkit-bottom-left-radius: 15px;
-  -moz-border-top-left-radius: 15px;
-  -moz-bottom-left-radius: 15px;
   border: none;
   background: var(--grey-color);
   color: black;
@@ -77,10 +73,6 @@ input{
   padding: .95rem;
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
-  -webkit-top-right-radius: 15px;
-  -webkit-bottom-right-radius: 15px;
-  -moz-top-right-radius: 15px;
-  -moz-bottom-right-radius: 15px;
   font-size: inherit;
 }
 .spell
@@ -186,7 +178,7 @@ ul li{
   align-items: center;
   justify-content: center;
   border-radius: 15px;
-  gap: 1rem;
+  gap: .5rem;
   cursor: pointer;
 }
 .bottom-header:hover

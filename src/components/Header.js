@@ -25,7 +25,7 @@ function Header({ onChange, theme, darkMode, handleClick, goToFavorites, navigat
         </div>
         <div className='bottom-header' onClick={goToFavorites}>
             <p>Favorites</p>
-            <AiFillHeart />
+            <AiFillHeart className='purple'/>
         </div>
         </>
     )
