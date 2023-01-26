@@ -1,11 +1,11 @@
 import { AiOutlineSearch } from 'react-icons/ai'
 
-function Input({ inputChange, OnSubmit }) {
+function Input({ OnSubmit, inputRef, setInput }) {
     return (
         <>
             <form className='input-container' onSubmit={OnSubmit}>
-                <input type='text' placeholder='e.g. keyboard' onChange={inputChange} />
-                <button className='search-btn'>
+                <input type='text' placeholder='e.g. keyboard' ref={inputRef} />
+                <button className='search-btn' onClick={() => setInput(inputRef.current.value)}>
                     <AiOutlineSearch />
                 </button>
             </form>
