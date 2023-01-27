@@ -42,7 +42,7 @@ function App() {
       !response.ok ? setIsOk(false) : setIsOk(true)
 
       setWord(words);
-      setIsLoading(false)
+      // setIsLoading(false)
     };
 
     dataFetch();

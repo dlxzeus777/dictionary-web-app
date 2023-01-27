@@ -312,7 +312,7 @@ ul li{
   align-items: center;
   justify-content: center;
   margin-top: auto;
-  height: 80vh;
+  height: 50vh;
 }
 @media (max-width: 440px)
 {
