@@ -11,7 +11,7 @@
 
 - React
 - CSS
-- Chakra UI (for a loading spinner)
+- Chakra UI
 - Free Dictionary API
 
 ## Live Site URL:
