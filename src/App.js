@@ -42,7 +42,7 @@ function App() {
       !response.ok ? setIsOk(false) : setIsOk(true)
 
       setWord(words);
-      // setIsLoading(false)
+      setIsLoading(false)
     };
 
     dataFetch();
@@ -149,7 +149,7 @@ function App() {
                 thickness='4px'
                 speed='0.65s'
                 emptyColor='gray.200'
-                color='blue.500'
+                color='rgb(151, 58, 244)'
                 size='xl'
                 className='spinner'
               /></div>
