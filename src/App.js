@@ -6,6 +6,7 @@ import { useState, useEffect, useRef } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Welcome from './components/Welcome';
 import FavoriteWords from './components/FavoriteWords'
+import { Spinner } from '@chakra-ui/react'
 
 function App() {
 
@@ -121,6 +122,7 @@ function App() {
     }
   }
 
+  console.log(word)
   // Deleting favorites from array with filter
   const deleteFavorites = (id) => {
     setFavorites(current => current.filter(item => {
@@ -143,7 +145,14 @@ function App() {
             : <><Header onChange={onChange} darkMode={darkMode} theme={theme} handleClick={handleClick} goToFavorites={goToFavorites} navigateToFavorites={navigateToFavorites}/>
               <Input  OnSubmit={OnSubmit} inputRef={inputRef} setInput={setInput} />
               {isLoading
-                ? <h1 className='loading'>Loading...</h1>
+                ? <div className='spinner-container'><Spinner
+                thickness='4px'
+                speed='0.65s'
+                emptyColor='gray.200'
+                color='blue.500'
+                size='xl'
+                className='spinner'
+              /></div>
                 : isOk ? <Main word={word} playAudio={playAudio} addToFavorites={addToFavorites} status={status} /> : <Error word={word} input={input} />}
             </>}
       </>

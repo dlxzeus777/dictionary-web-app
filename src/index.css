@@ -306,6 +306,14 @@ ul li{
 .items{
   margin-bottom: 1rem;
 }
+.spinner-container
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  height: 80vh;
+}
 @media (max-width: 440px)
 {
   .source > a{
