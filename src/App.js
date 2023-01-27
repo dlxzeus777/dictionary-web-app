@@ -94,11 +94,9 @@ function App() {
   }, [theme]);
 
   // Status text function
-  const statusBackToDefault = () =>
-  {
-    setTimeout(() =>
-    {
-      setStatus('')  
+  const statusBackToDefault = () => {
+    setTimeout(() => {
+      setStatus('')
     }, 3000);
   }
 
@@ -108,17 +106,15 @@ function App() {
     const favoriteWords = favorites.map(favorite => {
       return favorite.favorite
     })
-    if (favoriteWords.includes(word))
-    {
+    if (favoriteWords.includes(word)) {
       setStatus(`${word} already in favorites`)
       statusBackToDefault()
       return
     }
-    else
-    {
+    else {
       setStatus(`${word} added to favorites`)
       statusBackToDefault()
-      setFavorites(current => [...current, { id: uuidv4(), favorite: word, meanings: meanings}])
+      setFavorites(current => [...current, { id: uuidv4(), favorite: word, meanings: meanings }])
     }
   }
 
@@ -142,17 +138,17 @@ function App() {
           ? <FavoriteWords favorites={favorites} deleteFavorites={deleteFavorites} goToFavorites={goToFavorites} />
           : navigate
             ? <Welcome handleClick={handleClick} />
-            : <><Header onChange={onChange} darkMode={darkMode} theme={theme} handleClick={handleClick} goToFavorites={goToFavorites} navigateToFavorites={navigateToFavorites}/>
-              <Input  OnSubmit={OnSubmit} inputRef={inputRef} setInput={setInput} />
+            : <><Header onChange={onChange} darkMode={darkMode} theme={theme} handleClick={handleClick} goToFavorites={goToFavorites} navigateToFavorites={navigateToFavorites} />
+              <Input OnSubmit={OnSubmit} inputRef={inputRef} setInput={setInput} />
               {isLoading
                 ? <div className='spinner-container'><Spinner
-                thickness='4px'
-                speed='0.65s'
-                emptyColor='gray.200'
-                color='rgb(151, 58, 244)'
-                size='xl'
-                className='spinner'
-              /></div>
+                  thickness='4px'
+                  speed='0.65s'
+                  emptyColor='gray.200'
+                  color='rgb(151, 58, 244)'
+                  size='xl'
+                  className='spinner'
+                /></div>
                 : isOk ? <Main word={word} playAudio={playAudio} addToFavorites={addToFavorites} status={status} /> : <Error word={word} input={input} />}
             </>}
       </>
