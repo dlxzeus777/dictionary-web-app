@@ -119,7 +119,7 @@ function App() {
     else {
       setStatus(`${word} added to favorites`)
       statusBackToDefault()
-      setFavorites(current => [...current, { id: uuidv4(), favorite: word, meanings: meanings }])
+      setFavorites(current => [{ id: uuidv4(), favorite: word, meanings: meanings },...current])
     }
   }
 
