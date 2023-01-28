@@ -70,7 +70,7 @@ input{
 {
   background: var(--grey-color);
   border: none;
-  padding: .94rem;
+  padding: .95rem;
   font-size: inherit;
 }
 .spell
