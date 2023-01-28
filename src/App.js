@@ -10,9 +10,10 @@ import FavoriteWords from './components/FavoriteWords'
 import { Spinner } from '@chakra-ui/react'
 
 function App() {
+  const options = ["Sans-serif", "Serif", "Monospace"];
 
   // STATES
-  const [fontFamily, setFontFamily] = useState('sans-serif')
+  const [fontFamily, setFontFamily] = useState(options[0])
   const [word, setWord] = useState([])
   const [isLoading, setIsLoading] = useState(false)
   const [isOk, setIsOk] = useState(true)
@@ -23,6 +24,8 @@ function App() {
   const [favorites, setFavorites] = useState([])
   const [status, setStatus] = useState('')
   const [openNavBar, setOpenNavBar] = useState(false)
+
+  
 
   // UseRef for getting input value instead of onChange
   const inputRef = useRef(null)
@@ -142,12 +145,12 @@ function App() {
   return (
     <div style={{ fontFamily: fontFamily }} className='container'>
       <>
-        {openNavBar ? <><Header onChange={onChange} darkMode={darkMode} theme={theme} handleClick={handleClick} goToFavorites={goToFavorites} navigateToFavorites={navigateToFavorites} openNav={openNav} openNavBar={openNavBar} /> <Menu onChange={onChange} darkMode={darkMode} theme={theme} goToFavorites={goToFavorites} /></>
+        {openNavBar ? <><Header onChange={onChange} darkMode={darkMode} theme={theme} handleClick={handleClick} goToFavorites={goToFavorites} navigateToFavorites={navigateToFavorites} openNav={openNav} openNavBar={openNavBar} options={options} fontFamily={fontFamily} /> <Menu onChange={onChange} darkMode={darkMode} theme={theme} goToFavorites={goToFavorites} options={options} fontFamily={fontFamily} /></>
         : navigateToFavorites
           ? <FavoriteWords favorites={favorites} deleteFavorites={deleteFavorites} goToFavorites={goToFavorites} />
           : navigate
             ? <Welcome handleClick={handleClick} />
-            : <><Header onChange={onChange} darkMode={darkMode} theme={theme} handleClick={handleClick} goToFavorites={goToFavorites} navigateToFavorites={navigateToFavorites} openNav={openNav} openNavBar={openNavBar} />
+            : <><Header onChange={onChange} darkMode={darkMode} theme={theme} handleClick={handleClick} goToFavorites={goToFavorites} navigateToFavorites={navigateToFavorites} openNav={openNav} openNavBar={openNavBar} options={options} fontFamily={fontFamily} />
               <Input OnSubmit={OnSubmit} inputRef={inputRef} setInput={setInput} />
               {isLoading
                 ? <div className='spinner-container'><Spinner
