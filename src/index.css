@@ -251,6 +251,7 @@ ul li{
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--grey-color);
+  margin-bottom: 2.5rem;
 }
 .favorite-word{
   font-size: 2rem;
@@ -372,6 +373,11 @@ input {
 {
   margin: 0;
 }
+.heart{
+  font-size: 2rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
 @media (max-width: 600px)
 {
   .font-and-theme
@@ -388,6 +394,10 @@ input {
   {
     background: var(--main-color);
     color: white;
+  }
+  .heart
+  {
+    display: none;
   }
 }
 @media (max-width: 440px)

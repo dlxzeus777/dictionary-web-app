@@ -3,8 +3,9 @@ import { BsFillSunFill } from 'react-icons/bs'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { ImBooks } from 'react-icons/im'
 import { RiCloseFill } from 'react-icons/ri'
+import { AiOutlineHeart } from 'react-icons/ai'
 
-function Header({ onChange, theme, darkMode, handleClick, openNav, openNavBar, options, fontFamily }) {
+function Header({ onChange, theme, darkMode, handleClick, openNav, openNavBar, options, fontFamily, goToFavorites }) {
 
     return (
         <>
@@ -13,7 +14,7 @@ function Header({ onChange, theme, darkMode, handleClick, openNav, openNavBar, o
                     <ImBooks />
                     <h6 className='brand-name' onClick={handleClick}>Word<span className='purple'>Wizard</span></h6>
                 </div>
-
+                <AiOutlineHeart className='heart' onClick={goToFavorites}/>
                 <div className='font-and-theme'>
                     <select
                         id="fonts"
