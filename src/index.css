@@ -350,6 +350,16 @@ ul li{
   width: 100%;
   cursor: pointer;
 }
+input {
+  border-radius: 0;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+}
+input {
+  -webkit-appearance: none;
+}
 @media (max-width: 600px)
 {
   .font-and-theme
