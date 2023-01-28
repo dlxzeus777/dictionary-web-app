@@ -4,7 +4,7 @@ function FavoriteWords({ favorites, deleteFavorites, goToFavorites }) {
     return (
         <>
             <div className='favorite-words-header'>
-                <h1>Favorite Words</h1>
+                <h3>Favorite Words</h3>
                 <AiOutlineArrowLeft onClick={goToFavorites} className='go-back-btn' />
             </div>
             {favorites.length > 0 ? favorites.map((favorite, index) => {
@@ -20,7 +20,7 @@ function FavoriteWords({ favorites, deleteFavorites, goToFavorites }) {
                         </div>
                     </div>
                 )
-            }) : <h3>You have zero favorite words. Add some!</h3>}
+            }) : <h5>You have zero favorite words. Add some!</h5>}
 
         </>
     )
