@@ -231,11 +231,10 @@ ul li{
 }
 .favorite-words
 {
-  border-radius: 10px;
   justify-content: space-between;
   margin-bottom: 1rem;
   padding: 1.25rem;
-  border: 1px solid var(--main-color);
+  border-radius: 0.5rem;
 }
 .favorite-words > p{
   margin: 0;

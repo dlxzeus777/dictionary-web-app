@@ -147,7 +147,7 @@ function App() {
       <>
         {openNavBar ? <><Header onChange={onChange} darkMode={darkMode} theme={theme} handleClick={handleClick} goToFavorites={goToFavorites} navigateToFavorites={navigateToFavorites} openNav={openNav} openNavBar={openNavBar} options={options} fontFamily={fontFamily} /> <Menu onChange={onChange} darkMode={darkMode} theme={theme} goToFavorites={goToFavorites} options={options} fontFamily={fontFamily} /></>
         : navigateToFavorites
-          ? <FavoriteWords favorites={favorites} deleteFavorites={deleteFavorites} goToFavorites={goToFavorites} />
+          ? <FavoriteWords favorites={favorites} deleteFavorites={deleteFavorites} goToFavorites={goToFavorites} theme={theme} />
           : navigate
             ? <Welcome handleClick={handleClick} />
             : <><Header onChange={onChange} darkMode={darkMode} theme={theme} handleClick={handleClick} goToFavorites={goToFavorites} navigateToFavorites={navigateToFavorites} openNav={openNav} openNavBar={openNavBar} options={options} fontFamily={fontFamily} />
