@@ -1,11 +1,11 @@
-## Dictionary Web App
+## WordWizard app
 
 ![Desktop](./src/images/dictionary-desktop.png "Desktop Design")
 ![Mobile](./src/images/dictionary-mobile.png "Mobile Design")
 
 ## About:
 
-- This project is a web application that allows users to easily and quickly access definitions for a wide range of words. The app is built using the React JavaScript library. The app utilizes a free dictionary API to retrieve the definitions for the words that users search for. This API allows the app to access a vast database of words and their meanings, ensuring that the app can provide accurate and reliable definitions for a wide range of words. Overall, this project is a useful and user-friendly tool for anyone looking to quickly and easily access definitions for a variety of words.
+- The WordWizard web application, expertly crafted utilizing the React JavaScript library, CSS styling, and the Chakra UI design system, is a sophisticated and elegant digital lexicon, utilizing a free dictionary API to provide users with an extensive array of definitions and linguistic information. The app is intuitively designed to facilitate effortless navigation and search functionality, allowing users to quickly and easily access the linguistic knowledge they seek. It is a must-have tool for anyone in need of a comprehensive and reliable dictionary.
 
 ## Built with:
 
