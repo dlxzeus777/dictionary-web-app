@@ -13,6 +13,7 @@
 - CSS
 - Chakra UI
 - Free Dictionary API
+- react-hot-toast
 
 ## Live Site URL:
 
