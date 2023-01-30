@@ -5,10 +5,16 @@ import App from './App';
 
 import { ChakraProvider } from '@chakra-ui/react'
 
+import { Toaster } from 'react-hot-toast';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ChakraProvider resetCSS={false}>
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+      />
       <App />
     </ChakraProvider>
   </React.StrictMode>

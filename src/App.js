@@ -8,6 +8,7 @@ import { v4 as uuidv4 } from 'uuid';
 import Welcome from './components/Welcome';
 import FavoriteWords from './components/FavoriteWords'
 import { Spinner } from '@chakra-ui/react'
+import { toast } from 'react-hot-toast';
 
 function App() {
   const options = ["Sans-serif", "Serif", "Monospace"];
@@ -22,7 +23,6 @@ function App() {
   const [navigate, setNavigate] = useState(true)
   const [navigateToFavorites, setNavigateToFavorites] = useState(false)
   const [favorites, setFavorites] = useState([])
-  const [status, setStatus] = useState('')
   const [openNavBar, setOpenNavBar] = useState(false)
 
   
@@ -98,13 +98,6 @@ function App() {
     };
   }, [theme]);
 
-  // Status text function
-  const statusBackToDefault = () => {
-    setTimeout(() => {
-      setStatus('')
-    }, 3000);
-  }
-
 
   // Adding words to favorites. And we're checking if its already in the array if its not the word gets added else it wont get added.
   const addToFavorites = (word, meanings) => {
@@ -112,13 +105,11 @@ function App() {
       return favorite.favorite
     })
     if (favoriteWords.includes(word)) {
-      setStatus(`${word} already in favorites`)
-      statusBackToDefault()
+      toast.error(`${word} already in favorites`)
       return
     }
     else {
-      setStatus(`${word} added to favorites`)
-      statusBackToDefault()
+      toast.success(`${word} added to favorites`)
       setFavorites(current => [{ id: uuidv4(), favorite: word, meanings: meanings },...current])
     }
   }
@@ -161,7 +152,7 @@ function App() {
                   size='xl'
                   className='spinner'
                 /></div>
-                : isOk ? <Main word={word} playAudio={playAudio} addToFavorites={addToFavorites} status={status} /> : <Error word={word} input={input} />
+                : isOk ? <Main word={word} playAudio={playAudio} addToFavorites={addToFavorites} /> : <Error word={word} input={input} />
                 }
                 
             </>}

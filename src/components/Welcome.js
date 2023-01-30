@@ -1,5 +1,4 @@
 import dictionary from '../images/dictionary.png'
-import { Button } from '@chakra-ui/react'
 import { AiOutlineArrowRight } from 'react-icons/ai'
 
 const Welcome = ({ handleClick }) => {
