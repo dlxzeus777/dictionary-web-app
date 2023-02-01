@@ -14,6 +14,7 @@
 - Chakra UI
 - Free Dictionary API
 - react-hot-toast
+- framer motion
 
 ## Live Site URL:
 
