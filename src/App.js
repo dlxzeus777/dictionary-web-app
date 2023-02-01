@@ -154,7 +154,6 @@ function App() {
                 /></div>
                 : isOk ? <Main word={word} playAudio={playAudio} addToFavorites={addToFavorites} /> : <Error word={word} input={input} />
                 }
-                
             </>}
       </>
 

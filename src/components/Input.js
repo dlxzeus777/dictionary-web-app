@@ -6,7 +6,7 @@ function Input({ OnSubmit, inputRef, setInput }) {
             <form className='input-container' onSubmit={OnSubmit}>
                 <input type='text' placeholder='e.g. keyboard' ref={inputRef} />
                 <button className='search-btn' onClick={() => setInput(inputRef.current.value)}>
-                    <AiOutlineSearch />
+                    <AiOutlineSearch className='search-icon'/>
                 </button>
             </form>
 

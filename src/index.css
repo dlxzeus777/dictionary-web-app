@@ -377,6 +377,19 @@ input {
   margin-right: 1rem;
   cursor: pointer;
 }
+.search-icon
+{
+  color: var(--main-color);
+}
+.word-wizard
+{
+  border-bottom: 3px solid var(--main-color);
+  padding-bottom: .25rem;
+}
+.arrow-right-icon
+{
+  font-size: 1.25rem;
+}
 @media (max-width: 600px)
 {
   .font-and-theme

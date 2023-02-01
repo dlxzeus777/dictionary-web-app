@@ -9,7 +9,7 @@ function Header({ onChange, theme, darkMode, handleClick, openNav, openNavBar, o
 
     return (
         <>
-            <div className='header-container'>
+            <div className='header-container' style={{borderBottom: openNavBar ? '0' : '1px solid var(--grey-color)'}}>
                 <div className='logo'>
                     <ImBooks />
                     <h6 className='brand-name' onClick={handleClick}>Word<span className='purple'>Wizard</span></h6>
