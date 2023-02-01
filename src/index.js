@@ -12,7 +12,7 @@ root.render(
   <React.StrictMode>
     <ChakraProvider resetCSS={false}>
       <Toaster
-        position="top-center"
+        position="bottom-center"
         reverseOrder={false}
       />
       <App />

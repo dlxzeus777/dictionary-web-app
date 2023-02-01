@@ -1,5 +1,7 @@
 import { BsFillTrashFill } from 'react-icons/bs'
 import { AiOutlineArrowLeft } from 'react-icons/ai'
+import { motion } from "framer-motion";
+
 function FavoriteWords({ favorites, deleteFavorites, goToFavorites, theme }) {
     return (
         <>
@@ -9,11 +11,14 @@ function FavoriteWords({ favorites, deleteFavorites, goToFavorites, theme }) {
             </div>
             {favorites.length > 0 ? favorites.map((favorite, index) => {
                 return (
-                    <div className='favorite-words' key={index} style={{background: theme ? 'rgb(52 58 70)' : 'rgb(246 247 249)', boxShadow: 'inset 0 0 2px #000000'}}>
+
+                    <div className='favorite-words' key={index} style={{ background: theme ? 'rgb(52 58 70)' : 'rgb(246 247 249)', boxShadow: 'inset 0 0 2px #000000' }}>
                         <div className='favorite-container'>
                             <div className='word-bin'>
                                 <p className='favorite-word'>{favorite.favorite}</p>
-                                <BsFillTrashFill onClick={() => deleteFavorites(favorite.id)} className='bin' />
+                                <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }} >
+                                    <BsFillTrashFill onClick={() => deleteFavorites(favorite.id)} className='bin' />
+                                </motion.div>
                             </div>
                             <h4 className='meaning'>Meaning</h4>
                             <p>{favorite.meanings[0]}</p>

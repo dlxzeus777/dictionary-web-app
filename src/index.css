@@ -390,6 +390,11 @@ input {
 {
   font-size: 1.25rem;
 }
+
+.motion-li::marker
+{
+  content: '';
+}
 @media (max-width: 600px)
 {
   .font-and-theme
